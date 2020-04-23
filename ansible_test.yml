@@ -5,4 +5,4 @@
       file:
     	path: /tmp/test_ansible
     	state: directory
-      mode: '0777'
+    	mode: '0777'
