@@ -3,6 +3,6 @@
   tasks:
     - name: Hello Message
       file:
-    	path: /tmp/test_ansible
-    	state: directory
-    	mode: '0777'
+       path: /tmp/test_ansible
+       state: directory
+       mode: '0777'
