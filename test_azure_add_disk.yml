@@ -1,15 +1,13 @@
 - name: Create managed disk
   azure_rm_manageddisk:
-    name: mymanageddisk
-    location: eastus
-    resource_group: myResourceGroup
-    disk_size_gb: 4
+    name: harshalmanageddisk
+    resource_group: HarshalRG
+    disk_size_gb: 1
 
 - name: Mount the managed disk to VM
   azure_rm_manageddisk:
-    name: mymanageddisk
-    location: eastus
-    resource_group: myResourceGroup
-    disk_size_gb: 4
-    managed_by: testvm001
+    name: harshalmanageddisk
+    resource_group: HarshalRG
+    disk_size_gb: 1
+    managed_by: harshalVM
     attach_caching: read_only
