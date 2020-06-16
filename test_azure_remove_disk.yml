@@ -1,11 +1,14 @@
-- name: Unmount the managed disk to VM
-  azure_rm_manageddisk:
-    name: harshalmanageddisk
-    resource_group: HarshalRG
-    disk_size_gb: 1
+- name: Remove Disk from Azure VM
+  hosts: all
+  tasks:
+    - name: Unmount the managed disk to VM
+      azure_rm_manageddisk:
+        name: harshalmanageddisk
+        resource_group: HarshalRG
+        disk_size_gb: 1
 
-- name: Delete managed disk
-  azure_rm_manageddisk:
-    name: harshalmanageddisk
-    resource_group: HarshalRG
-    state: absent
+    - name: Delete managed disk
+      azure_rm_manageddisk:
+        name: harshalmanageddisk
+        resource_group: HarshalRG
+        state: absent
