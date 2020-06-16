@@ -1,9 +1,9 @@
 - name: Add disk to Azure VM
   hosts: all
   tasks:
-    - name: install python package
-      pip:
-        name: setuptools
+    - name: install pip
+      apt:
+        name: python-pip
 
     - name: Create managed disk
       azure_rm_manageddisk:
