@@ -4,6 +4,7 @@
     - name: install pip
       apt:
         name: python-pip
+        force_apt_get: yes
 
     - name: Create managed disk
       azure_rm_manageddisk:
